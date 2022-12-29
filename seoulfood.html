@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>seoul food</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style type="text/css">
+    *{
+          margin:0;
+          padding: 0;
+          list-style:none;
+
+      }
+
+.header{
+    width:100%;
+    height:125px;
+    background-color:#98b7b9;
+    display:flex; 
+
+}
+
+.logo{
+   width:50px;
+   height:50px;
+   margin-top:30px;
+   margin-left:180px;
+   cursor:pointer;
+}
+
+.home{
+    margin-top:45px; 
+    cursor:pointer;
+}
+
+.bg{
+    background-color:#f9ebd6;
+}
+
+.item{
+    
+    background-color:#ffa32f;
+    border-radius: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.item2{
+    background-color:#28323d ;
+    border-radius: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.item-group{
+    width:100%;
+    max-width: 1200px;
+    margin:auto;
+}
+
+.title{
+    margin:0px 0px 20px;
+    text-align: center;
+    height:80px;
+    background-color:#f1d09d;
+}
+
+.title h1{
+    text-align: center;
+    padding:20px;
+    animation-name:jump;
+    animation-duration: 2s;
+    animation-iteration-count:1;  
+    position:relative;
+}
+
+@keyframes jump{
+   0%{
+     left:-100%;
+   }
+   100%{
+     left:0;
+   }
+}
+
+.item{
+    width:100%;
+    margin:0 10px 40px;
+    animation:in;
+    animation-duration: 5s;
+}
+
+.item2{
+    width:100%;
+    margin:0 10px 40px;
+    animation:in;
+    animation-duration: 5s;
+}
+
+.item:hover{
+    background-color:#af6407;
+}
+
+.item2:hover{
+    background-color:#091017;
+}
+
+.item  h1{
+   font-size:10px;
+   text-align: center;
+}
+
+.item2 h1{
+    font-size:10px;
+    color:white;
+    text-align: center;
+}
+
+
+.item p{
+   font-size:2px;
+   text-align: left;
+   padding:10px;
+}
+
+.item2 p{
+   font-size:2px;
+   color:white;
+   text-align: left;
+   padding:10px;
+}
+
+.item .pic img{
+    width:100%;
+    height:100px;
+    border-radius:15px;
+ }
+
+.item2 .pic img{
+    width:100%;
+    height:100px;
+    border-radius:15px;
+ }
+
+.pic{
+    max-width: 100%;
+    height: auto;
+    margin:auto;
+    overflow:hidden;
+}
+
+.pic{
+    transform:scale(1,1);
+    transition: all 1s ease-out;
+}
+.pic:hover{
+    transform:scale(1.1,1.1);
+}
+
+.item-group{
+    display: flex;
+}
+/*footer*/
+.phoneillu{
+    margin-left: 10px;
+    margin-top:20px;
+}
+
+.facebook{
+    margin-left: 10px;
+    margin-top:20px;
+}
+
+.ig{
+    margin-left: 10px;
+    margin-top:20px;
+}
+
+.login{
+    margin-left: 10px;
+    margin-top:20px;
+}
+
+.translate{
+    margin-left: 10px;
+    margin-top:20px;
+}
+
+.img2{
+    display:flex;
+    margin-left:90px;
+}
+
+.footer{
+    width:100%;
+    height:90px;
+    background-color: #98b7b9;
+    text-align: center; 
+}
+/*footer*/
+/*list*/
+.search
+{
+    width:50px;
+    height:50px;
+    margin-left: 290px;
+    margin-top:35px;
+}
+ul { /* 取消ul預設的內縮及樣式 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.drop-down-menu {
+    border: #ccc 1px solid;
+    display: inline-block;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+    border-right: #ccc 1px solid;
+}
+
+ul.drop-down-menu > li:last-child {
+    border-right: none;
+}
+
+ul.drop-down-menu > li {
+    float: left; /* 只有第一層是靠左對齊*/
+}
+
+ ul.drop-down-menu a {
+    background-color: #ffa32f;
+    color: #28323d;
+    display: block;
+    padding: 0 30px;
+    text-decoration: none;
+    line-height: 40px;
+
+}
+ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+    background-color: #28323d;
+    color: #ffa32f;
+}
+ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+    background-color: #28323d;
+    color: #ffa32f;
+}
+ul.drop-down-menu ul {
+    border: #ccc 1px solid;
+    position: absolute;
+    
+    left: -1px;
+    top: 100%;
+   
+}
+
+ul.drop-down-menu ul li {
+    border-bottom: #ccc 1px solid;
+}
+ul.drop-down-menu ul { /*隱藏次選單*/
+    display: none;
+}
+
+ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+    display: block;
+}
+
+.nav{
+    opacity: 0;
+    z-index:100;
+}
+/*list*/
+
+
+/*動畫淡入*/
+@keyframes in{
+    0%{
+       opacity:0;
+    }
+    100%{
+       opacity:1;
+    }
+   }
+
+
+
+/*平板*/
+@media screen and (min-width:768px){
+  .item-group{
+      display:flex;
+  }
+  .title h1{
+    font-size: 35px;
+  }
+  .item h1{
+    font-size: 20px;
+  }
+
+  .item2 h1{
+    font-size: 20px;
+  }
+
+  .item p{
+    font-size:6px;
+  }
+
+  .item2 p{
+    font-size:6x;
+  }
+  .item{
+    width:100%;
+    flex-direction: row;
+  }
+
+  .item2{
+    width:100%;
+    flex-direction: row;
+}
+  .item .pic img{
+    width:100%;
+    height:150px;
+ }
+
+ .item2 .pic img{
+    width:100%;
+    height:150px;
+ }
+ .logo{
+    margin-top:30px;
+    margin-left:40px;
+ }
+ .header{
+    width:100%;
+    height:150px;
+ }
+/*footer*/
+.phoneillu{
+    margin-top:25px;
+}
+
+.facebook{
+    margin-left: 190px;
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.ig{
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.login{
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.translate{
+    margin-top:25px;
+    margin-right: 20px;
+}
+/*footer*/
+/*list*/
+.nav{
+    width:100%;
+    margin:auto;
+    margin-left: 130px;
+    opacity: 1;
+}
+
+}
+
+
+/*電腦*/
+@media screen and (min-width:1024px){
+    .item-group{
+      display:flex;
+  }
+
+  .item{
+    width:100%;
+  }
+
+  .item2{
+    width:100%;
+}
+
+  .item .pic img{
+    width:100%;
+    height:250px;
+ }
+
+ .item2 .pic img{
+    width:100%;
+    height:250px;
+ }
+
+  .title h1{
+    font-size: 45px;
+  }
+  .item h1{
+    font-size: 24px;
+  }
+  .item2 h1{
+    font-size: 24px;
+  }
+
+  .item p{
+    font-size:8px;
+  }
+
+  .item2 p{
+    font-size:8px;
+  }
+
+  .header{
+    width:100%;
+    height:160px;
+ }
+
+ /*footer*/
+.phoneillu{
+    margin-top:25px;
+}
+
+.facebook{
+    margin-left: 450px;
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.ig{
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.login{
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.translate{
+    margin-top:25px;
+    margin-right: 20px;
+}
+.img2{
+    margin-left:5px;
+}
+/*footer*/
+/*list*/
+.nav{
+    width:100%;
+    margin:auto;
+    margin-left: 250px;
+    opacity: 1;
+}
+}
+
+    </style>
+</head>
+
+<body class="bg">
+    
+        <header class="header">
+          <div class="logo" >
+              <a href="./index.html"><img src="img/logo.png" alt="logo" width="80px" height="80px"/></a>
+          </div>
+      
+          <div class="home">
+              <a href="./index.html"></a><img src="img/home.jpg" alt="home" width="75px" height="50px"/></a>
+          </div>
+       
+      <nav class="nav">
+          <ul class="drop-down-menu">
+              <li><a href="#">food</a>
+                  <ul>
+                      <li><a href="./seoulfood.html">seoul</a>
+                      </li>
+                      <li><a href="./busanfood.html">busan</a>
+                      </li>
+                  </ul>
+              <li><a href="#">site</a>
+                  <ul>
+                      <li><a href="./seoulsite.html">seoul</a>
+                      </li>
+                      <li><a href="./busan.html">busan</a>
+                      </li>
+                  </ul>
+              </li>
+              <li><a href="#">clothes</a>
+                  <ul>
+                      <li><a href="./clothes.html">seoul</a>
+                      </li>
+                  </ul>
+              </li>
+              <li><a href="#">festival</a>
+                  <ul>
+                      <li><a href="./busan.html">seoul</a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>  
+          
+      </nav>
+      </header>
+    
+     
+         
+     <div class="about">
+       <div class="wrap">
+         <div class="title">
+             <h1>熱門精選</h1>
+         </div>
+           <div class="item-group">
+     
+              <div class="item">
+                <h1>橋村炸雞</h1>
+                 <div class="pic">
+                     <img src="img/chicken.jpg" alt="chicken" width="250px" height="250px"/>
+                 </div>
+
+              <div class="worddd">
+                 <p>地址:首爾特別市西大門區滄川洞31-91
+                 <br>營業時間:12:00-0:00</p>
+              </div>
+     
+             </div>
+             
+     
+             
+              <div class="item">
+                 <h1>土俗村蔘雞湯</h1>
+                 <div class="pic">
+                    <img src="img/soup.jpg" alt="soup" width="250px" height="250px"/>
+                 </div>
+     
+             <div class="worddd">
+                 
+                 <p>地址:首爾特別市鍾路區紫霞門路5街5 <br>營業時間:10:00 ~ 22:00</p>
+             </div>
+     
+         </div>
+          
+         
+           
+              <div class="item">
+                 <h1>順熙家綠豆煎餅</h1>
+                 <div class="pic">
+                     <img src="img/pancake.jpg" alt="pancake" width="250px" height="250px"/>
+                 </div>
+     
+             <div class="worddd">
+                 
+                 <p>地址:首爾特別市鐘路區鐘路5街138-9<br>營業時間:08:00 ~ 23:00</p>
+             </div>
+     
+           </div>
+             
+              <div class="item">
+                 <h1>肉膾姊妹家</h1>
+                 <div class="pic">
+                     <img src="img/octopus.jpg" alt="octopus" width="250px" height="250px"/>
+                 </div>
+     
+                 <div class="worddd">
+                     
+                     <p>地址:首爾特别市鍾路區鍾路4街177<br>營業時間:10:00～22:00</p>
+                 </div>
+              </div>
+     
+         </div> <!--item-group-->
+       </div><!--wrap-->
+     </div><!--about-->
+         
+     
+     <div class="service">
+         <div class="wrap">
+             <div class="item-group">
+     
+              <div class="item2">
+               <h1>昌信生拌牛肉</h1>
+                 <div class="pic">
+                     <img src="img/beef.jpg" alt="beef" width="250px" height="250px"/>
+                 </div>
+     
+                 <div class="worddd">
+                    
+                    <p>地址:首爾特別市鐘路區鐘路4街165-3<br>營業時間:9:00-23:00</p>
+                 </div>
+     
+             </div>
+           
+              <div class="item2">
+               <h1>BOOYAS烤腸</h1>
+                 <div class="pic">
+                     <img src="img/sausage.jpg" alt="sausage" width="250px" height="250px"/>
+                 </div>
+     
+                 <div class="worddd">
+                    
+                    <p>地址:首爾特別市麻浦區乙馬堂路136-13<br>營業時間:16:00~22:00</p>
+                 </div>
+     
+             </div>
+           
+              <div class="item2">
+                  <h1>乙密臺</h1>
+                 <div class="pic">
+                     <img src="img/noodle.jpg" alt="noodle" width="250px" height="250px"/>
+                 </div>
+     
+                 <div class="worddd">
+                  
+                   <p>地址:首爾特别市麻浦區崇文街24<br>營業時間:11:00~22:00</p>
+                 </div>
+     
+             </div>
+           
+              <div class="item2">
+                 <h1>滿足五香豬腳</h1>
+                 <div class="pic">
+                     <img src="img/pig.jpg" alt="pig" width="250px" height="250px"/>
+                 </div>
+     
+             <div class="worddd">
+                 
+                 <p>地址:首爾市中區西小門路134-7<br>營業時間:11:30~22:00</p>
+             </div>
+     
+             </div>
+     
+           </div> <!--item-group-->
+         </div><!--wrap-->    
+     </div><!--service-->
+     
+
+     <footer class="footer">
+      <div class="img2">
+          <div class="facebook">
+              <a href="https://www.facebook.com/"><img src="img/facebook.png" class="imgall2" alt="fb" width="40px" height="40px"/></a>
+           </div>
+           <div class="ig">
+              <a href="https://www.instagram.com/"><img src="img/ig.png" class="imgall2" alt="ig" width="40px" height="40px"/></a>
+          </div>
+          <div class="login">
+              <a href="./loginpage.html"><img src="img/login.png" class="imgall2" alt="login" width="40px" height="40px"/></a>
+          </div>
+      
+          <div class="translate">
+              <a href=""><img src="img/translate.png" class="imgall2" alt="translate" width="40px" height="40px"/></a>
+          </div>
+          <div class="phoneillu">
+              <a href=""><img src="img/phoneillu.png" class="imgall2" alt="phoneillu" width="40px" height="40px"/></a>
+          </div>
+      </div>
+  </footer>
+
+</body>
+</html>

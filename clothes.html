@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>seoul clothingshop</title>
+    <style type="text/css">
+     *{
+          margin:0;
+          padding: 0;
+          list-style:none;
+
+      }
+
+.scbg{
+    background-color:#f9ebd6 ;
+} 
+
+.header{
+    width:100%;
+    height:125px;
+    background-color:#98b7b9;
+    display:flex; 
+}
+
+.logo{
+   width:50px;
+   height:50px;
+   margin-top:30px;
+   margin-left:180px;
+   cursor:pointer;
+}
+
+.home{
+    margin-top:45px; 
+    cursor:pointer;
+}
+
+.ctitle{
+   background-color: #ffa32f;
+   opacity: 0.8;
+   text-align: center;
+   height:80px;
+   z-index:1;
+}
+
+.ctitle h1{
+    padding:20px;
+    animation-name:jump;
+  animation-duration: 2s;
+  animation-iteration-count:1;  
+  position:relative;
+}
+
+@keyframes jump{
+   0%{
+     left:-100%;
+   }
+   100%{
+     left:0;
+   }
+}
+
+.container2{
+   background-color: #ffa32f;
+   height:900px;
+   max-width:1350px;
+   margin:0px;
+   
+   display:grid;
+   grid-template-columns:1fr 1fr;
+   grid-gap:0px;
+}
+
+.cloth1{
+    width:100%;
+    height:210px;
+    background-color:#f9ebd6;
+    animation-name:lefttoright;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    position:relative;
+}
+
+@keyframes lefttoright{
+   0%{
+      left:-100%;
+   }
+   100%{
+      left:0%;
+   }
+}
+
+@keyframes righttoleft{
+   0%{
+      right:-100%;
+   }
+   100%{
+      right:0%;
+   }
+}
+
+.cloth1 h1{
+    text-align: center;
+    margin-top: 15px;
+    font-size:20px;
+}
+
+.cloth1 p{
+    text-align:left;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.cloth2 img{
+    width:100%;
+    height:210px;
+    animation-name:righttoleft;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    position:relative;
+
+}
+
+.cloth3 img{
+    width:100%;
+    height:210px;
+    animation-name:lefttoright;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    position:relative;
+}
+.cloth4{
+    width:100%;
+    height:210px;
+    background-color:#142436;
+    animation-name:righttoleft;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    position:relative;
+}
+.cloth4 h1{
+    text-align: center;
+    margin-top: 15px;
+    font-size:20px;
+    color:white;
+}
+
+.cloth4 p{
+    text-align:left;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 10px;
+    color:white;
+}
+.cloth5{
+    width:100%;
+    height:210px;
+    background-color:#f9ebd6;
+    animation-name:lefttoright;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    position:relative;
+}
+
+.cloth5 h1{
+    text-align: center;
+    margin-top: 15px;
+    font-size:20px;
+    color:black;
+}
+
+.cloth5 p{
+    text-align:left;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 10px;
+    color:black;
+}
+
+.cloth6 img{
+    width:100%;
+    height:210px;
+    animation-name:righttoleft;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    position:relative;
+}
+
+.cloth7 img{
+    width:100%;
+    height:210px;
+    animation-name:lefttoright;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    position:relative;
+}
+.cloth8{
+    width:100%;
+    height:210px;
+    background-color:#142436;
+    animation-name:righttoleft;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    position:relative;
+}
+
+.cloth8 h1{
+    text-align: center;
+    margin-top: 15px;
+    font-size:20px;
+    color:white;
+}
+
+.cloth8 p{
+    text-align:left;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 10px;
+    color:white;
+}
+
+/*list*/
+.search
+{
+    width:50px;
+    height:50px;
+    margin-left: 290px;
+    margin-top:35px;
+}
+ul { /* 取消ul預設的內縮及樣式 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.drop-down-menu {
+    border: #ccc 1px solid;
+    display: inline-block;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+    border-right: #ccc 1px solid;
+}
+
+ul.drop-down-menu > li:last-child {
+    border-right: none;
+}
+
+ul.drop-down-menu > li {
+    float: left; /* 只有第一層是靠左對齊*/
+}
+
+ ul.drop-down-menu a {
+    background-color: #ffa32f;
+    color: #28323d;
+    display: block;
+    padding: 0 30px;
+    text-decoration: none;
+    line-height: 40px;
+
+}
+ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+    background-color: #28323d;
+    color: #ffa32f;
+}
+ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+    background-color: #28323d;
+    color: #ffa32f;
+}
+ul.drop-down-menu ul {
+    border: #ccc 1px solid;
+    position: absolute;
+    
+    left: -1px;
+    top: 100%;
+   
+}
+
+ul.drop-down-menu ul li {
+    border-bottom: #ccc 1px solid;
+}
+ul.drop-down-menu ul { /*隱藏次選單*/
+    display: none;
+}
+
+ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+    display: block;
+}
+
+.nav{
+    opacity: 0;
+    z-index:100;
+}
+/*list*/
+
+/*footer*/
+.phoneillu{
+    margin-left: 10px;
+    margin-top:20px;
+}
+
+.facebook{
+    margin-left: 10px;
+    margin-top:20px;
+}
+
+.ig{
+    margin-left: 10px;
+    margin-top:20px;
+}
+
+.login{
+    margin-left: 10px;
+    margin-top:20px;
+}
+
+.translate{
+    margin-left: 10px;
+    margin-top:20px;
+}
+
+
+
+.img2{
+    display:flex;
+    margin-left:90px;
+}
+
+.footer{
+    width:100%;
+    height:90px;
+    background-color: #98b7b9;
+    text-align: center; 
+}
+/*footer*/
+
+
+
+
+
+/*平板*/
+@media screen and (min-width:768px){
+    .cloth1{
+    height:310px;
+}
+   
+   .cloth1 h1{
+    margin-top: 20px;
+    font-size:40px;
+}
+   .cloth1 p{
+    padding: 20px;
+    font-size: 18px;
+}
+
+.cloth2 img{
+    height:310px;
+}
+
+.cloth3 img{
+    height:310px;
+}
+
+.cloth4{
+    height:310px;
+}
+.cloth4 h1{
+    margin-top: 20px;
+    font-size:40px;
+}
+
+.cloth4 p{
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+.cloth5{
+    height:310px;
+}
+   
+.cloth5 h1{
+    margin-top: 20px;
+    font-size:40px;
+}
+
+.cloth5 p{
+    padding: 20px;
+    font-size: 18px;
+}
+
+.cloth6 img{
+    height:310px;
+}
+
+.cloth7 img{
+    height:310px;
+}
+
+.cloth8{
+    height:310px;
+}
+   
+.cloth8 h1{
+    margin-top: 20px;
+    font-size:40px;
+}
+
+.cloth8 p{
+    padding: 20px;
+    font-size: 18px;
+}
+.container2{
+    height:1250px;
+}
+.logo{
+    margin-top:30px;
+    margin-left:40px;
+ }
+ /*footer*/
+ .phoneillu{
+    margin-top:25px;
+}
+
+.facebook{
+    margin-left: 190px;
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.ig{
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.login{
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.translate{
+    margin-top:25px;
+    margin-right: 20px;
+}
+/*list*/
+.nav{
+    width:100%;
+    margin:auto;
+    margin-left: 130px;
+    opacity: 1;
+}
+}
+
+
+/*電腦*/
+@media screen and (min-width:1024px){
+    .cloth1{
+    height:410px;
+}
+   
+   .cloth1 h1{
+    margin-top: 20px;
+    font-size:55px;
+}
+
+   .cloth1 p{
+    padding: 30px;
+    font-size: 24px;
+}
+
+
+.cloth2 img{
+    height:410px;
+}
+
+.cloth3 img{
+    height:410px;
+}
+
+  .cloth4{
+    height:410px;
+}
+   
+   .cloth4 h1{
+    margin-top: 20px;
+    font-size:55px;
+}
+
+   .cloth4 p{
+    padding: 30px;
+    font-size: 24px;
+}
+
+.cloth5{
+    height:410px;
+}
+
+.cloth5 h1{
+    margin-top: 20px;
+    font-size:55px;
+}
+
+   .cloth5 p{
+    padding: 30px;
+    font-size: 24px;
+}
+
+
+.cloth6 img{
+    height:410px;
+}
+
+.cloth7 img{
+    height:410px;
+}
+
+.cloth8{
+    height:410px;
+}
+
+.cloth8 h1{
+    margin-top: 20px;
+    font-size:55px;
+}
+
+.cloth8 p{
+    padding: 30px;
+    font-size: 24px;
+}
+.container2{
+    height:1650px;
+}
+.nav{
+    width:100%;
+    margin:auto;
+    margin-left: 230px;/*200*/
+    opacity: 1;
+}
+/*footer*/
+.phoneillu{
+    margin-top:25px;
+}
+
+.facebook{
+    margin-left: 450px;/*450*/
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.ig{
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.login{
+    margin-top:25px;
+    margin-right: 20px;
+}
+
+.translate{
+    margin-top:25px;
+    margin-right: 20px;
+}
+.img2{
+    margin-left:5px;
+}
+/**/
+}
+
+</style>
+
+</head>
+
+<body class="scbg">
+    <header class="header">
+        <div class="logo" >
+            <a href="./index.html"><img src="img/logo.png" alt="logo" width="80px" height="80px"/></a>
+        </div>
+    
+        <div class="home">
+            <a href="./index.html"></a><img src="img/home.jpg" alt="home" width="75px" height="50px"/></a>
+        </div>
+     
+    <nav class="nav">
+        <ul class="drop-down-menu">
+            <li><a href="#">food</a>
+                <ul>
+                    <li><a href="./seoulfood.html">seoul</a>
+                    </li>
+                    <li><a href="./busanfood.html">busan</a>
+                    </li>
+                </ul>
+            <li><a href="#">site</a>
+                <ul>
+                    <li><a href="./seoulsite.html">seoul</a>
+                    </li>
+                    <li><a href="./busan.html">busan</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">clothes</a>
+                <ul>
+                    <li><a href="./clothes.html">seoul</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">festival</a>
+                <ul>
+                    <li><a href="./busan.html">seoul</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>  
+        
+    </nav>
+    
+        <!-- <div class="search">
+            <a href=""><img src="img/search.png"  alt="search" width="50px" height="50px"/></a>
+        </div> -->
+    </header>
+
+    <div class="ctitle">
+        <h1>首爾知名服裝品牌</h1>
+     </div>
+
+    <div class="container2">
+        <div class="cloth1">
+              <h1>thisisneverthat</h1>
+              <p>成立於2010年的韓國首爾街頭服飾品牌。 thisisneverthat是old school類型以摇滾和滑板文化取材的街頭品牌，色彩、款式選取以及剪裁均貼合都市青年格調，是近些年来最有影響力的韓國街頭服飾品牌之一。</p>
+        </div>
+  
+        <div class="cloth2">
+          <img src="img/this.jpg">
+        </div>
+  
+
+        <div class="cloth3">
+          <img src="img/oioi.jpg">
+        </div>
+  
+        <div class="cloth4">
+          <h1>oioi</h1>
+          <p>於2011年由設計師Jung Ye Seul於韓國首爾所創立的服裝品牌，「Oi」是想要引起別人注意時的韓文發音，近似於中文的「喂！」，希望以有趣的設計引起市場的注意。設計定位為美式復古風，融合年輕人的搞怪創意及時尚潮流，在服飾中會加入有趣可愛的細節處理。</p>
+      </div>
+  
+        <div class="cloth5">
+          <h1>And you</h1>
+          <p>推出的除了有衣服、連身裙、牛仔單品系列、休閒服外，還有布袋、飾物、配件等，非常多元化。 要界定And You 的風格的話，它既有韓國品牌的隨性簡約感覺，亦不失法式的浪漫元素點綴，在很多連身裙單品中都可以看見法國女生的影子。</p>
+        </div>
+  
+        <div class="cloth6">
+          <img src="img/and you.jpg">
+       </div>
+  
+        <div class="cloth7">
+          <img src="img/mardi.jpg">
+        </div>
+  
+        <div class="cloth8">
+          <h1>Mardi Mercredi</h1>
+          <p>雖然是來自韓國的品牌，但它的設計以法式慵懶風為主，走清新可愛的風格。 就像最知名的小雛菊T shirt，即是用簡單卻不失活潑的線條勾勒出小雛菊，配上極度精緻質感的字體，再配上和諧色調，打造慵懶率性卻不失時髦感的T-shirt。</p>>
+       </div>
+  
+     </div>
+  
+  
+
+   </div>
+   <footer class="footer">
+        <div class="img2">
+            <div class="facebook">
+                <a href="https://www.facebook.com/"><img src="img/facebook.png" class="imgall2" alt="fb" width="40px" height="40px"/></a>
+             </div>
+             <div class="ig">
+                <a href="https://www.instagram.com/"><img src="img/ig.png" class="imgall2" alt="ig" width="40px" height="40px"/></a>
+            </div>
+            <div class="login">
+                <a href="./loginpage.html"><img src="img/login.png" class="imgall2" alt="login" width="40px" height="40px"/></a>
+            </div>
+        
+            <div class="translate">
+                <a href=""><img src="img/translate.png" class="imgall2" alt="translate" width="40px" height="40px"/></a>
+            </div>
+            <div class="phoneillu">
+                <a href=""><img src="img/phoneillu.png" class="imgall2" alt="phoneillu" width="40px" height="40px"/></a>
+            </div>
+        </div>
+    </footer>
+</body>    
